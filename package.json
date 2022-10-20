@@ -1,0 +1,32 @@
+{
+  "name": "contact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "concurrently \"cd server && npm run server\" \"cd client && npm run dev\"",
+    "start": "cd server && node server.js",
+    "server": "cd server nodemon server.js --ignore client",
+    "build": "cd client && npm run build",
+    "client": "cd client && npm start",
+    "heroku-prebuild": "npm install --dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Berserk9000/contact-card.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Berserk9000/contact-card/issues"
+  },
+  "engines": {
+    "node": "17.x"
+  },
+  "homepage": "https://github.com/Berserk9000/contact-card#readme",
+  "dependencies": {
+    "concurrently": "^7.4.0"
+  }
+}
